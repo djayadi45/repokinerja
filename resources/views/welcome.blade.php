@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    PT Geoservices Bandung 
+                Geoservices Bandung 
                 </div>
 
                 <div class="links">
