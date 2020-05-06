@@ -14,5 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $nama = 'BERANDA';
+    return view('welcome', ['nama' => $nama]);
+});
+
+Route::get('/float', function () {
+    return view('float');
+});
+
+Route::get('/pegawai', function () {
+    $nama = 'Halaman Pegawai';
+    return view('pegawai', ['nama' => $nama]);
+});
+
+Route::get('/penilaian', function () {
+    $nama = 'Halaman Penilaian';
+    return view('penilaian', ['nama' => $nama]);
 });

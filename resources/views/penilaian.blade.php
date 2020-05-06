@@ -9,6 +9,8 @@
             </div>
         </div>
     </div>
+    
 </div>
 @endsection
+
 @extends('template/footer')
