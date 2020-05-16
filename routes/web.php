@@ -31,3 +31,13 @@ Route::get('/penilaian', function () {
     $nama = 'Halaman Penilaian';
     return view('penilaian', ['nama' => $nama]);
 });
+
+Route::get('/deksplorasi', function () {
+    $nama = 'Divisi Eksplorasi';
+    return view('deksplorasi', ['nama' => $nama]);
+});
+
+Route::get('/dlabbatubara', function () {
+    $nama = 'Divisi/Lab Batubara';
+    return view('dlabbatubara', ['nama' => $nama]);
+});
