@@ -32,10 +32,11 @@ Route::get('/penilaian', function () {
     return view('penilaian', ['nama' => $nama]);
 });
 
-Route::get('/deksplorasi', function () {
-    $nama = 'Divisi Eksplorasi';
-    return view('deksplorasi', ['nama' => $nama]);
-});
+// Route::get('/deksplorasi', function () {
+//     $nama = 'Divisi Eksplorasi';
+//     return view('deksplorasi', ['nama' => $nama]);
+// });
+Route::get('/deksplorasi', 'DeskplorasiController@index');
 
 Route::get('/dlabbatubara', function () {
     $nama = 'Divisi/Lab Batubara';
