@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Deksplorasi;
 
+use function GuzzleHttp\Promise\all;
+
 class DeskplorasiController extends Controller
 {
     /**
@@ -15,7 +17,7 @@ class DeskplorasiController extends Controller
     public function index()
     {
         $deksplorasi = Deksplorasi::all();
-        return view('deksplorasi', ['deksplorasi' => $deksplorasi]);
+        return view('deksplorasi.index', ['deksplorasi' => $deksplorasi]);
     }
 
     /**
@@ -25,7 +27,7 @@ class DeskplorasiController extends Controller
      */
     public function create()
     {
-        //
+        return view('deksplorasi.create');
     }
 
     /**
@@ -36,7 +38,31 @@ class DeskplorasiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama'=> 'required',
+            'nik'=> 'required',
+            'ttl'=> 'required',
+            'jenisKelamin'=> 'required',
+            'alamat'=> 'required',
+            'statusKel'=> 'required',
+            'mulaiKerja'=> 'required',
+            'statusKep' => 'required',
+            'jabatan'=> 'required'
+        ]);
+
+        $deksplorasi = new Deksplorasi;
+        $deksplorasi->nama = $request->nama;
+        $deksplorasi->nik = $request->nik;
+        $deksplorasi->ttl = $request->ttl;
+        $deksplorasi->jenisKelamin = $request->jenisKelamin;
+        $deksplorasi->alamat = $request->alamat;
+        $deksplorasi->statusKel = $request->statusKel;
+        $deksplorasi->mulaiKerja = $request->mulaiKerja;
+        $deksplorasi->statusKep = $request->statusKep;
+        $deksplorasi->jabatan = $request->jabatan;
+        $deksplorasi->save();
+        
+        return redirect('/deksplorasi')->with('status, Data Berhasil Ditambahkan!');
     }
 
     /**
@@ -81,6 +107,7 @@ class DeskplorasiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Deksplorasi::destroy($deksplorasi->id);
+        return redirect('/deksplorasi')->with('status, Data Berhasil Dihapus!');
     }
 }

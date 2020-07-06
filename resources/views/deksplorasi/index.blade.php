@@ -9,7 +9,12 @@
             </div>
         </div>
     </div>
-    <a href="" class="btn button-primary fa-align-right">Tambah Data</a>
+    <a href="/deksplorasi/create" class="btn btn-success">Tambah Data</a>
+    @if (session('status'))
+        <div class="alert alert-success">
+          {{session('status')}}
+        </div>
+    @endif
     <table class="table">
         <thead class="thead-dark">
           <tr>
@@ -40,8 +45,12 @@
             <td>{{$deks->statusKep}}</td>
             <td>{{$deks->jabatan}}</td>
             <td>
-              <a href="" class="badge badge-success">Edit</a>
-              <a href="" class="badge badge-danger">Hapus</a>
+              <button type="submit" class="btn btn-primary">Edit</button>
+              <form action="deksplorasi->id" method="POST">
+                @method('delete');
+                @csrf
+                <button type="submit" class="btn btn-danger">Delete</button>
+              </form>
             </td>
           </tr>
           @endforeach

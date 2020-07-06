@@ -37,6 +37,9 @@ Route::get('/penilaian', function () {
 //     return view('deksplorasi', ['nama' => $nama]);
 // });
 Route::get('/deksplorasi', 'DeskplorasiController@index');
+Route::get('/deksplorasi/create', 'DeskplorasiController@create');
+Route::post('/deksplorasi', 'DeskplorasiController@store');
+Route::delete('deksplorasi/{{deksplorasi}}', 'DeskplorasiController@destroyer');
 
 Route::get('/dlabbatubara', function () {
     $nama = 'Divisi/Lab Batubara';
