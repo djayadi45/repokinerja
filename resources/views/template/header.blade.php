@@ -7,8 +7,8 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Startmin - Bootstrap Admin Theme</title>
-
+        <title>PT.Geoservices</title>
+        
         <!-- Bootstrap Core CSS -->
         <link href="/ui/css/bootstrap.min.css" rel="stylesheet">
 
@@ -41,7 +41,7 @@
             <!-- Navigation -->
             <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="/">Startmin</a>
+                    <a class="navbar-brand" href="/">PT.GEOSERVICES</a>
                 </div>
 
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -52,7 +52,7 @@
                 </button>
 
                 <ul class="nav navbar-nav navbar-left navbar-top-links">
-                    <li><a href="#"><i class="fa fa-home fa-fw"></i> Website</a></li>
+                    <li><a href="http://www.geoservices.co.id/" target='_blank'><i class="fa fa-home fa-fw"></i>Website PT.Geoservices</a></li>
                 </ul>
 
                 <ul class="nav navbar-right navbar-top-links">

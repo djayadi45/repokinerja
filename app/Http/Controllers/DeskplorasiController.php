@@ -71,9 +71,11 @@ class DeskplorasiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Deksplorasi $deksplorasi)
     {
-        //
+        //return $deksplorasi;
+        // return view('deksplorasi.index',compact('deksplorasi'));
+
     }
 
     /**
@@ -82,9 +84,9 @@ class DeskplorasiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Deksplorasi $deksplorasi)
     {
-        //
+        return view('deksplorasi.edit', compact('deksplorasi'));
     }
 
     /**
@@ -94,20 +96,39 @@ class DeskplorasiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Deksplorasi $deksplorasi)
     {
-        //
+        Deksplorasi::where('id', $deksplorasi->id)
+        ->update([
+           'nama' => $request->nama,
+           'nik' => $request->nik,
+           'ttl' => $request->ttl,
+           'jenisKelamin' => $request->jenisKelamin,
+           'alamat' => $request->alamat,
+           'statusKel' => $request->statusKel,
+           'nama' => $request->nama,
+           'mulaiKerja' => $request->mulaiKerja,
+           'statusKep' => $request->statusKep,
+           'jabatan' => $request->jabatan
+        ]);
+        return redirect('/deksplorasi')->with('status, Data Berhasil DiUpdate!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Deksplorasi $deksplorasi
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Deksplorasi $deksplorasi)
     {
         Deksplorasi::destroy($deksplorasi->id);
-        return redirect('/deksplorasi')->with('status, Data Berhasil Dihapus!');
+        return redirect('/deksplorasi')->with('status, Data Berhasil DiHapus!');
+    }
+    public function delete($id)
+    {
+        // DB::table('deksplorasis')->where('id', $id)->delete;
+        $deletedRows = Deksplorasi::where('id', $id)->delete();
+        return redirect('/deksplorasi')->with('status, Data Berhasil DiHapus!');
     }
 }

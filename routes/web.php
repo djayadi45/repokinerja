@@ -36,10 +36,16 @@ Route::get('/penilaian', function () {
 //     $nama = 'Divisi Eksplorasi';
 //     return view('deksplorasi', ['nama' => $nama]);
 // });
+Route::delete('/deksplorasi/{id}', 'DeskplorasiController@destroy');
+Route::delete('deksplorasi/{id}', 'DeskplorasiController@delete');
 Route::get('/deksplorasi', 'DeskplorasiController@index');
+Route::get('/deksplorasi/{{deksplorasi}}', 'DeskplorasiController@show');
 Route::get('/deksplorasi/create', 'DeskplorasiController@create');
 Route::post('/deksplorasi', 'DeskplorasiController@store');
-Route::delete('deksplorasi/{{deksplorasi}}', 'DeskplorasiController@destroyer');
+Route::delete('/deksplorasi/{deksplorasi}', 'DeskplorasiController@destroy');
+Route::get('/deksplorasi/{deksplorasi}/edit', 'DeskplorasiController@edit');
+Route::patch('/deksplorasi/{deksplorasi}', 'DeskplorasiController@update');
+
 
 Route::get('/dlabbatubara', function () {
     $nama = 'Divisi/Lab Batubara';
