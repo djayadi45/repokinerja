@@ -32,10 +32,7 @@ Route::get('/penilaian', function () {
     return view('penilaian', ['nama' => $nama]);
 });
 
-// Route::get('/deksplorasi', function () {
-//     $nama = 'Divisi Eksplorasi';
-//     return view('deksplorasi', ['nama' => $nama]);
-// });
+
 Route::delete('/deksplorasi/{id}', 'DeskplorasiController@destroy');
 Route::delete('deksplorasi/{id}', 'DeskplorasiController@delete');
 Route::get('/deksplorasi', 'DeskplorasiController@index');
@@ -47,7 +44,12 @@ Route::get('/deksplorasi/{deksplorasi}/edit', 'DeskplorasiController@edit');
 Route::patch('/deksplorasi/{deksplorasi}', 'DeskplorasiController@update');
 
 
-Route::get('/dlabbatubara', function () {
-    $nama = 'Divisi/Lab Batubara';
-    return view('dlabbatubara', ['nama' => $nama]);
-});
+Route::delete('/dlabbatubara/{id}', 'DlabbatubaraController@destroy');
+Route::delete('dlabbatubara/{id}', 'DlabbatubaraController@delete');
+Route::get('/dlabbatubara', 'DlabbatubaraController@index');
+Route::get('/dlabbatubara/{{dlabbatubara}}', 'DlabbatubaraController@show');
+Route::get('/dlabbatubara/create', 'DlabbatubaraController@create');
+Route::post('/dlabbatubara', 'DlabbatubaraController@store');
+Route::delete('/dlabbatubara/{dlabbatubara}', 'DlabbatubaraController@destroy');
+Route::get('/dlabbatubara/{dlabbatubara}/edit', 'DlabbatubaraController@edit');
+Route::patch('/dlabbatubara/{dlabbatubara}', 'DlabbatubaraController@update');

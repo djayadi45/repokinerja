@@ -62,7 +62,7 @@ class DeskplorasiController extends Controller
         $deksplorasi->jabatan = $request->jabatan;
         $deksplorasi->save();
         
-        return redirect('/deksplorasi')->with('status, Data Berhasil Ditambahkan!');
+        return redirect('/deksplorasi')->with('sukses, Data Berhasil Ditambahkan!');
     }
 
     /**
