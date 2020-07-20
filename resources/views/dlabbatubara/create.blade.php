@@ -5,7 +5,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Tambah Pegawai Div.Eksplorasi</h1>
+                <h1 class="page-header">Tambah Pegawai Div.Lab Batu Bara</h1>
             </div>
         </div>
     </div>

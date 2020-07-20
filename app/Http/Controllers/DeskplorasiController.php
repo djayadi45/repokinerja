@@ -39,15 +39,15 @@ class DeskplorasiController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama'=> 'required',
-            'nik'=> 'required',
-            'ttl'=> 'required',
-            'jenisKelamin'=> 'required',
-            'alamat'=> 'required',
-            'statusKel'=> 'required',
-            'mulaiKerja'=> 'required',
+            'nama' => 'required',
+            'nik' => 'required',
+            'ttl' => 'required',
+            'jenisKelamin' => 'required',
+            'alamat' => 'required',
+            'statusKel' => 'required',
+            'mulaiKerja' => 'required',
             'statusKep' => 'required',
-            'jabatan'=> 'required'
+            'jabatan' => 'required'
         ]);
 
         $deksplorasi = new Deksplorasi;
@@ -61,7 +61,7 @@ class DeskplorasiController extends Controller
         $deksplorasi->statusKep = $request->statusKep;
         $deksplorasi->jabatan = $request->jabatan;
         $deksplorasi->save();
-        
+
         return redirect('/deksplorasi')->with('sukses, Data Berhasil Ditambahkan!');
     }
 
@@ -99,18 +99,18 @@ class DeskplorasiController extends Controller
     public function update(Request $request, Deksplorasi $deksplorasi)
     {
         Deksplorasi::where('id', $deksplorasi->id)
-        ->update([
-           'nama' => $request->nama,
-           'nik' => $request->nik,
-           'ttl' => $request->ttl,
-           'jenisKelamin' => $request->jenisKelamin,
-           'alamat' => $request->alamat,
-           'statusKel' => $request->statusKel,
-           'nama' => $request->nama,
-           'mulaiKerja' => $request->mulaiKerja,
-           'statusKep' => $request->statusKep,
-           'jabatan' => $request->jabatan
-        ]);
+            ->update([
+                'nama' => $request->nama,
+                'nik' => $request->nik,
+                'ttl' => $request->ttl,
+                'jenisKelamin' => $request->jenisKelamin,
+                'alamat' => $request->alamat,
+                'statusKel' => $request->statusKel,
+                'nama' => $request->nama,
+                'mulaiKerja' => $request->mulaiKerja,
+                'statusKep' => $request->statusKep,
+                'jabatan' => $request->jabatan
+            ]);
         return redirect('/deksplorasi')->with('status, Data Berhasil DiUpdate!');
     }
 

@@ -30,9 +30,9 @@
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        
         <![endif]-->
+        
     </head>
     <body>
 
@@ -57,7 +57,7 @@
 
                 <ul class="nav navbar-right navbar-top-links">
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <span>{{auth()->user()->name}}</span>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <span></span>
                             <i class="fa fa-user fa-fw"></i> secondtruth <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu dropdown-user">

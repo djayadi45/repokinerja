@@ -15,11 +15,12 @@ class CreateIndikatorkompetensisTable extends Migration
     {
         Schema::create('indikatorkompetensis', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->foreignId('fakom_id')->constrained('faktorkompetensis')->onDelete('cascade')->onUpdate('cascade');
             $table->integer('idFaktorKompetensi');
             $table->string('namaIndikator');
-            $table->char('bobot', 4);
+            $table->double('bobot');
             $table->double('nilai', 4);
-            $table->double('target');
+            $table->integer('target');
             $table->timestamps();
         });
     }

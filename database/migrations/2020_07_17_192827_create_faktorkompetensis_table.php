@@ -16,7 +16,7 @@ class CreateFaktorkompetensisTable extends Migration
         Schema::create('faktorkompetensis', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('namaFaktorKompetensi');
-            $table->char('bobot', 4);
+            $table->double('bobot');
             $table->timestamps();
         });
     }

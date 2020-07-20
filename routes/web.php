@@ -53,3 +53,13 @@ Route::post('/dlabbatubara', 'DlabbatubaraController@store');
 Route::delete('/dlabbatubara/{dlabbatubara}', 'DlabbatubaraController@destroy');
 Route::get('/dlabbatubara/{dlabbatubara}/edit', 'DlabbatubaraController@edit');
 Route::patch('/dlabbatubara/{dlabbatubara}', 'DlabbatubaraController@update');
+
+Route::delete('/faktorkompetensi/{id}', 'FaktorKompetensiController@destroy');
+Route::delete('faktorkompetensi/{id}', 'FaktorKompetensiController@delete');
+Route::get('/faktorkompetensi', 'FaktorKompetensiController@index');
+Route::get('/faktorkompetensi/{{faktorKompetensi}}', 'FaktorKompetensiController@show');
+Route::get('/faktorkompetensi/create', 'FaktorKompetensiController@create');
+Route::post('/faktorkompetensi', 'FaktorKompetensiController@store');
+Route::delete('/faktorkompetensi/{faktorkompetensi}', 'FaktorKompetensiController@destroy');
+Route::get('/faktorkompetensi/{faktorKompetensi}/edit', 'FaktorKompetensiController@edit');
+Route::patch('/faktorkompetensi/{faktorKompetensi}', 'FaktorKompetensiController@update');

@@ -34,16 +34,16 @@
                 <a href="/penilaian"><i class="fa fa-edit fa-fw"></i> Penilaian</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-wrench fa-fw"></i> Data Pegawai<span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-wrench fa-fw"></i> Data Master<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="/deksplorasi">Divisi Eksplorasi</a>
+                        <a href="/deksplorasi">Master Divisi Eksplorasi</a>
                     </li>
                     <li>
-                        <a href="/dlabbatubara">Divisi/Lab Batubara</a>
+                        <a href="/dlabbatubara"> Master Divisi Lab Batubara</a>
                     </li>
                     <li>
-                        <a href="notifications.html">Notifications</a>
+                        <a href="/faktorkompetensi">Master Kompetensi</a>
                     </li>
                     <li>
                         <a href="typography.html">Typography</a>
