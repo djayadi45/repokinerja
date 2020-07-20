@@ -63,3 +63,13 @@ Route::post('/faktorkompetensi', 'FaktorKompetensiController@store');
 Route::delete('/faktorkompetensi/{faktorkompetensi}', 'FaktorKompetensiController@destroy');
 Route::get('/faktorkompetensi/{faktorKompetensi}/edit', 'FaktorKompetensiController@edit');
 Route::patch('/faktorkompetensi/{faktorKompetensi}', 'FaktorKompetensiController@update');
+
+Route::delete('/indikatorkompetensi/{id}', 'IndikatorKompetensiController@destroy');
+Route::delete('indikatorkompetensi/{id}', 'IndikatorKompetensiController@delete');
+Route::get('/indikatorkompetensi', 'IndikatorKompetensiController@index');
+Route::get('/indikatorkompetensi/{{indikatorkompetensi}}', 'IndikatorKompetensiController@show');
+Route::get('/indikatorkompetensi/create', 'IndikatorKompetensiController@create');
+Route::post('/indikatorkompetensi', 'IndikatorKompetensiController@store');
+Route::delete('/indikatorkompetensi/{indikatorkompetensi}', 'IndikatorKompetensiController@destroy');
+Route::get('/indikatorkompetensi/{indikatorKompetensi}/edit', 'IndikatorKompetensiController@edit');
+Route::patch('/indikatorkompetensi/{indikatorKompetensi}', 'IndikatorKompetensiController@update');

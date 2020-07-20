@@ -5,9 +5,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 .col-md-offset-4">
-                <h1 class="page-header">FAKTOR KOMPETENSI</h1>
+                <h1 class="page-header">INDIKATOR KOMPETENSI</h1>
                 <div class="col-lg-12">
-                  <a href="/faktorkompetensi/create" class="btn btn-success">Tambah Data</a>
+                  <a href="/indikatorkompetensi/create" class="btn btn-success">Tambah Data</a>
                       @if (session('status'))
                           <div class="alert alert-success">
                             {{session('status')}}
@@ -15,7 +15,7 @@
                       @endif
                   <div class="panel panel-default">
                       <div class="panel-heading">
-                          Faktor Kompetensi
+                          Indikator Kompetensi
                       </div>
                       <!-- /.panel-heading -->
                       <div class="panel-body">
@@ -23,20 +23,26 @@
                               <table class="table table-hover">
                                   <thead>
                                       <tr>
-                                          <th scope="col">ID</th>
-                                          <th scope="col">Nama Faktor Kompetensi</th>
+                                          <th scope="col">No</th>
+                                          <th scope="col">Faktor Indikator</th>
+                                          <th scope="col">Nama Indikator Kompetensi</th>
                                           <th scope="col">Bobot</th>
+                                          <th scope="col">Nilai</th>
+                                          <th scope="col">Target</th>
                                       </tr>
                                   </thead>
                                   <tbody>
-                                    @foreach ($faktorkompetensi as $fak)
+                                    @foreach ($indikatorkompetensi as $ind)
                                     <tr>
                                         <th scope="row">{{$loop->iteration}}</th>
-                                      <td>{{$fak->namaFaktorKompetensi}}</td>
-                                      <td>{{$fak->bobot}}</td>
+                                      <td>{{$ind->fakom_id}}</td>
+                                      <td>{{$ind->namaIndikator}}</td>
+                                      <td>{{$ind->bobot}}</td>
+                                      <td>{{$ind->nilai}}</td>
+                                      <td>{{$ind->target}}</td>
                                       <td>
-                                        <a href="/faktorkompetensi/{{$fak->id}}/edit" class="btn btn-warning btn-xs">Edit</a>
-                                        <form action="/faktorkompetensi/{{$fak->id}}" method="POST" class="inline-block">
+                                        <a href="/indikatorkompetensi/{{$ind->id}}/edit" class="btn btn-warning btn-xs">Edit</a>
+                                        <form action="/indikatorkompetensi/{{$ind->id}}" method="POST" class="inline-block">
                                           @method('delete')
                                           @csrf
                                           <button type="submit" class="btn btn-danger btn-xs" onsubmit="return confirm('Yakin?')">Delete</button>
