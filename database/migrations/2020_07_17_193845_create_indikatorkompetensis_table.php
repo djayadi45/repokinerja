@@ -18,7 +18,6 @@ class CreateIndikatorkompetensisTable extends Migration
             $table->foreignId('fakom_id')->constrained('faktorkompetensis')->onDelete('cascade')->onUpdate('cascade');
             $table->string('namaIndikator');
             $table->double('bobot');
-            $table->double('nilai', 4);
             $table->integer('target');
             $table->timestamps();
         });

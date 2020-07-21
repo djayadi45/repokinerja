@@ -27,10 +27,6 @@ Route::get('/pegawai', function () {
     return view('pegawai', ['nama' => $nama]);
 });
 
-Route::get('/penilaian', function () {
-    $nama = 'Halaman Penilaian';
-    return view('penilaian', ['nama' => $nama]);
-});
 
 
 Route::delete('/deksplorasi/{id}', 'DeskplorasiController@destroy');
@@ -73,3 +69,9 @@ Route::post('/indikatorkompetensi', 'IndikatorKompetensiController@store');
 Route::delete('/indikatorkompetensi/{indikatorkompetensi}', 'IndikatorKompetensiController@destroy');
 Route::get('/indikatorkompetensi/{indikatorKompetensi}/edit', 'IndikatorKompetensiController@edit');
 Route::patch('/indikatorkompetensi/{indikatorKompetensi}', 'IndikatorKompetensiController@update');
+
+
+Route::get('/pendeksplorasi', 'PendeksplorasiController@index');
+
+
+Route::get('/pendlabbatubara', 'PendlabbatubaraController@index');

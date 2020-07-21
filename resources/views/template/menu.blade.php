@@ -31,7 +31,16 @@
                 <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
             </li>
             <li>
-                <a href="/penilaian"><i class="fa fa-edit fa-fw"></i> Penilaian</a>
+                <a href="#"><i class="fa fa-wrench fa-fw"></i>Penilaian<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="/pendeksplorasi">Penilaian Divisi Eksplorasi</a>
+                    </li>
+                    <li>
+                        <a href="/pendlabbatubara">Penilaian Divisi Lab Batubara</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
             </li>
             <li>
                 <a href="#"><i class="fa fa-wrench fa-fw"></i> Data Master<span class="fa arrow"></span></a>

@@ -27,7 +27,6 @@
                                           <th scope="col">Faktor Indikator</th>
                                           <th scope="col">Nama Indikator Kompetensi</th>
                                           <th scope="col">Bobot</th>
-                                          <th scope="col">Nilai</th>
                                           <th scope="col">Target</th>
                                       </tr>
                                   </thead>
@@ -38,8 +37,7 @@
                                       <td>{{$ind->fakom_id}}</td>
                                       <td>{{$ind->namaIndikator}}</td>
                                       <td>{{$ind->bobot}}</td>
-                                      <td>{{$ind->nilai}}</td>
-                                      <td>{{$ind->target}}</td>
+                                      <td>{{$ind->target}}</>
                                       <td>
                                         <a href="/indikatorkompetensi/{{$ind->id}}/edit" class="btn btn-warning btn-xs">Edit</a>
                                         <form action="/indikatorkompetensi/{{$ind->id}}" method="POST" class="inline-block">

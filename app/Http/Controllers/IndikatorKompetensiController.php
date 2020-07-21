@@ -40,7 +40,6 @@ class IndikatorKompetensiController extends Controller
             'fakom_id' => 'required',
             'namaIndikator' => 'required',
             'bobot' => 'required',
-            'nilai' => 'required',
             'target' => 'required'
         ]);
 
@@ -48,7 +47,6 @@ class IndikatorKompetensiController extends Controller
         $indikatorKompetensi->fakom_id = $request->fakom_id;
         $indikatorKompetensi->namaIndikator = $request->namaIndikator;
         $indikatorKompetensi->bobot = $request->bobot;
-        $indikatorKompetensi->nilai = $request->nilai;
         $indikatorKompetensi->target = $request->target;
         $indikatorKompetensi->save();
 
@@ -91,7 +89,6 @@ class IndikatorKompetensiController extends Controller
                 'fakom_id' => $request->fakom_id,
                 'namaIndikator' => $request->namaIndikator,
                 'bobot' => $request->bobot,
-                'nilai' => $request->nilai,
                 'target' => $request->target,
             ]);
         return redirect('/indikatorkompetensi')->with('status, Data Berhasil DiUpdate!');

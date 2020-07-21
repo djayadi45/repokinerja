@@ -46,17 +46,6 @@
         </div>
     </div>
     <div class="form-group row">
-        <label for="nilai" class="col-sm-2 col-form-label ">Nilai</label>
-        <div class="col-sm-10">
-        <input type="text" class="form-control @error('nilai') is-invalid @enderror" id="nilai" placeholder="Masukan Nilai" name="nilai" value="{{old('nilai')}}">
-        @error('nilai')
-        <div class="invalid-feedback">
-            {{$message}}
-        </div>
-        @enderror
-        </div>
-    </div>
-    <div class="form-group row">
         <label for="target" class="col-sm-2 col-form-label ">Target</label>
         <div class="col-sm-10 ">
         <input type="text" class="form-control " id="target" placeholder="Masukan Target" name="target" value="{{old('target')}}">
