@@ -34,7 +34,7 @@
                                     @foreach ($indikatorkompetensi as $ind)
                                     <tr>
                                         <th scope="row">{{$loop->iteration}}</th>
-                                      <td>{{$ind->fakom_id}}</td>
+                                      <td>{{$ind->faktor_kompetensi_id}}</td>
                                       <td>{{$ind->namaIndikator}}</td>
                                       <td>{{$ind->bobot}}</td>
                                       <td>{{$ind->target}}</>

@@ -13,10 +13,10 @@
     <form method="POST" action="/indikatorkompetensi">
         @csrf
     <div class="form-group row">
-        <label for="fakom_id" class="col-sm-2 col-form-label ">ID Faktor Kompetensi</label>
+        <label for="faktor_kompetensi_id" class="col-sm-2 col-form-label ">ID Faktor Kompetensi</label>
         <div class="col-sm-10">
-        <input type="text" class="form-control @error('fakom_id') is-invalid @enderror" id="fakom_id" placeholder="Masukan fakom_id" name="fakom_id" value="{{old('fakom_id')}}">
-        @error('fakom_id')
+        <input type="text" class="form-control @error('faktor_kompetensi_id') is-invalid @enderror" id="faktor_kompetensi_id" placeholder="Masukan faktor_kompetensi_id" name="faktor_kompetensi_id" value="{{old('fakom_id')}}">
+        @error('faktor_kompetensi_id')
         <div class="invalid-feedback">
             {{$message}}
         </div>

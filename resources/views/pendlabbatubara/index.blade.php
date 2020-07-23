@@ -5,15 +5,16 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 .col-md-offset-4">
-                <h1 class="page-header">PENILAIAN DIVISI LAB BATU BARA</h1>
-                <div class="panel panel-default">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        Hasil Penilaian Divisi Lab Batubara
-                    </div>
-                    <div class="panel-body">
-                    <form action="">
-                        <table class="table table-hover">
+                <h1 class="page-header">PENILAIAN DIVISI LAB BATUBARA</h1>
+                <div class="col-lg-12">
+                  <div class="panel panel-default">
+                      <div class="panel-heading">
+                          Data Pegawai
+                      </div>
+                      <!-- /.panel-heading -->
+                      <div class="panel-body">
+                          <div class="table-responsive">
+                              <table class="table table-hover">
                                   <thead>
                                       <tr>
                                           <th scope="col">Nama </th>
@@ -41,15 +42,19 @@
                                       <td>{{$dlab->statusKep}}</td>
                                       <td>{{$dlab->jabatan}}</td>
                                       <td>
-                                        <a href="/pendlabbatubara/{{$dlab->id}}/edit" class="btn btn-warning btn-xs">Mulai Penilaian</a>
+                                        <a href="/pendlabbatubara/{{$dlab->id}}/nilai" class="btn btn-warning btn-xs">Mulai Penilaian</a>
                                       </td>
                                     </tr>
                                     @endforeach
                                   </tbody>
                               </table>
-                    </div>
-                    </form>
-                </div>
+                          </div>
+                          <!-- /.table-responsive -->
+                      </div>
+                      <!-- /.panel-body -->
+                  </div>
+                  <!-- /.panel -->
+              </div>
             </div>
         </div>
     </div>

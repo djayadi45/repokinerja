@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Indikator;
+use App\FaktorKompetensi;
 use App\Dlabbatubara;
+use App\IndikatorKompetensi;
 use App\Pendlabbatubara;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redis;
 
 class PendlabbatubaraController extends Controller
 {
@@ -17,9 +21,20 @@ class PendlabbatubaraController extends Controller
     {
         $dlabbatubara = Dlabbatubara::all();
         return view('pendlabbatubara.index', ['dlabbatubara' => $dlabbatubara]);
-        $pendlabbatubara = Pendlabbatubara::all();
-        return view('pendlabbatubara.index', ['pendlabbatubara' => $pendlabbatubara]);
     }
+
+    public function nilai($id)
+    {
+        // dd($id);
+        $indikator = new \App\Indikator();
+        $lisindikator = $indikator->getFaktor1();
+        // dd($lisindikator);
+        return view('pendlabbatubara/nilai', ['lisindikator' => $lisindikator]);
+        $pendlabbatubara = Dlabbatubara::find($id);
+        return view('pendlabbatubara/nilai', ['pendlabbatubara' => $pendlabbatubara]);
+    }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -61,6 +76,7 @@ class PendlabbatubaraController extends Controller
      */
     public function edit(Pendlabbatubara $pendlabbatubara)
     {
+        //
     }
 
     /**
@@ -72,6 +88,7 @@ class PendlabbatubaraController extends Controller
      */
     public function update(Request $request, Pendlabbatubara $pendlabbatubara)
     {
+        //
     }
 
     /**

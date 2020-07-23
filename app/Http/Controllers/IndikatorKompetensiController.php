@@ -37,14 +37,14 @@ class IndikatorKompetensiController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'fakom_id' => 'required',
+            'faktor_kompetensi_id' => 'required',
             'namaIndikator' => 'required',
             'bobot' => 'required',
             'target' => 'required'
         ]);
 
         $indikatorKompetensi = new IndikatorKompetensi();
-        $indikatorKompetensi->fakom_id = $request->fakom_id;
+        $indikatorKompetensi->fakom_id = $request->faktor_kompetensi_id;
         $indikatorKompetensi->namaIndikator = $request->namaIndikator;
         $indikatorKompetensi->bobot = $request->bobot;
         $indikatorKompetensi->target = $request->target;
@@ -86,7 +86,7 @@ class IndikatorKompetensiController extends Controller
     {
         IndikatorKompetensi::where('id', $indikatorKompetensi->id)
             ->update([
-                'fakom_id' => $request->fakom_id,
+                'faktor_kompetensi_id' => $request->fakom_id,
                 'namaIndikator' => $request->namaIndikator,
                 'bobot' => $request->bobot,
                 'target' => $request->target,
