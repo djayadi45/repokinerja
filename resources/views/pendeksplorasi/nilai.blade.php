@@ -87,7 +87,7 @@
             }
         });
         $.ajax({
-            url: "/pendlabbatubara/savePenilaian",
+            url: "/pendeksplorasi/savePenilaian",
             type: "POST",
             data: data,
             cache: false,
