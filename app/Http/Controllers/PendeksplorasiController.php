@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\IndikatorKompetensi;
+use App\Deksplorasi;
 use App\Pendeksplorasi;
 use Illuminate\Http\Request;
 
@@ -15,7 +17,38 @@ class PendeksplorasiController extends Controller
     public function index()
     {
 
-        return view('pendeksplorasi.index');
+        $deksplorasi = Deksplorasi::all();
+        return view('pendeksplorasi.index', ['deksplorasi' => $deksplorasi]);
+    }
+
+    public function nilai($id)
+    {
+        // dd($id);
+        $indikator = new \App\Indikator();
+        $lisindikator = $indikator->getFaktor2();
+        // dd($lisindikator);
+        $pendeksplorasi = Deksplorasi::find($id);
+        return view('pendeksplorasi/nilai', compact('lisindikator', 'pendeksplorasi'));
+    }
+
+    public function savePenilaian(Request $request)
+    {
+
+        $data = $request->all();
+        error_log($data);
+
+        /*for ($i = 0; $i < count($items); $i++) {
+
+            $new_arr = [];
+
+            for ($j = ($i * $div); $j < (($i + 1) * $div); $j++) {
+                $new_arr[] = $arr[$j];
+            }
+
+            DB::transaction(function () use ($new_arr) {
+                DB::table('penilaians')->insert($new_arr);
+            });
+        }*/
     }
 
     /**

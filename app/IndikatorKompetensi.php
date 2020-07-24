@@ -13,6 +13,10 @@ class IndikatorKompetensi extends Model
     {
         return $this->hasMany(Pendlabbatubara::class);
     }
+    public function pendeksplorasi()
+    {
+        return $this->hasMany(Pendeksplorasi::class);
+    }
 
     public function faktorkompetensi()
     {
