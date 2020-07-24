@@ -32,6 +32,7 @@
                                     <th scope="col">Bobot</th>
                                     <th scope="col">Nilai</th>
                                     <th scope="col">Target</th>
+                                    <th scope="col">Total Score</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -43,6 +44,7 @@
                                     <td>{{$item->bobot * 100}}%</td>
                                     <td><input type="text" value={{$item->nilai}}></td>
                                     <td>{{$item->target}}</td>
+                                    <td>{{$item->nilai * $item->bobot}}</td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -77,7 +79,7 @@
      });
 
     function saveRecords(dataArr, idpeg){
-        alert("halo");
+        alert("Data berhasil Disimpan");
         var data = { items: JSON.stringify(dataArr), idpeg: idpeg };
         $.ajaxSetup({
             headers: {
