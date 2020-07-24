@@ -83,3 +83,4 @@ Route::get('/pendeksplorasi', 'PendeksplorasiController@index')->middleware('aut
 Route::get('/pendlabbatubara', 'PendlabbatubaraController@index')->middleware('auth');
 Route::get('/pendlabbatubara/{dlabbatubara}/nilai', 'PendlabbatubaraController@nilai')->middleware('auth');
 Route::post('/pendlabbatubara', 'PendlabbatubaraController@store')->middleware('auth');
+Route::post('/pendlabbatubara/savePenilaian/', 'PendlabbatubaraController@savePenilaian')->middleware('auth');

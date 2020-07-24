@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class IndikatorKompetensi extends Model
 {
     protected $table = 'indikatorkompetensis';
-    protected $fillable = [' faktor_kompetensi_id,namaIndikator, bobot, target'];
+    protected $fillable = ['id,faktor_kompetensi_id,namaIndikator, bobot, target'];
 
     public function pendlabbatubara()
     {

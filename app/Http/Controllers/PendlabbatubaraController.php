@@ -9,6 +9,7 @@ use App\IndikatorKompetensi;
 use App\Pendlabbatubara;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redis;
+use Input;
 
 class PendlabbatubaraController extends Controller
 {
@@ -29,12 +30,29 @@ class PendlabbatubaraController extends Controller
         $indikator = new \App\Indikator();
         $lisindikator = $indikator->getFaktor1();
         // dd($lisindikator);
-        return view('pendlabbatubara/nilai', ['lisindikator' => $lisindikator]);
         $pendlabbatubara = Dlabbatubara::find($id);
-        return view('pendlabbatubara/nilai', ['pendlabbatubara' => $pendlabbatubara]);
+        return view('pendlabbatubara/nilai', compact('lisindikator', 'pendlabbatubara'));
     }
 
+    public function savePenilaian(Request $request)
+    {
+      
+        $data = $request->all();
+        error_log($data);
 
+        /*for ($i = 0; $i < count($items); $i++) {
+
+            $new_arr = [];
+
+            for ($j = ($i * $div); $j < (($i + 1) * $div); $j++) {
+                $new_arr[] = $arr[$j];
+            }
+
+            DB::transaction(function () use ($new_arr) {
+                DB::table('penilaians')->insert($new_arr);
+            });
+        }*/
+    }
 
     /**
      * Show the form for creating a new resource.
